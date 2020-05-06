@@ -1,4 +1,4 @@
-package com.example.androidnav.ui.gallery
+package com.example.androidnav.ui.favorites
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,9 +10,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.androidnav.R
 
-class GalleryFragment : Fragment() {
+class FavoritesFragment : Fragment() {
 
-    private lateinit var galleryViewModel: GalleryViewModel
+    private lateinit var galleryViewModel: FavoritesViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -20,8 +20,8 @@ class GalleryFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_gallery, container, false)
+                ViewModelProviders.of(this).get(FavoritesViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_favorites, container, false)
         val textView: TextView = root.findViewById(R.id.text_gallery)
         galleryViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it

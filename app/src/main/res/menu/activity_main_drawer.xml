@@ -5,16 +5,24 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_articles"
             android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:title="Статьи" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_favorites"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="Избранное" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_settings"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:title="Настройки" />
+        <item
+            android:id="@+id/nav_support"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Помощь/поддержка"/>
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="О программе"/>
     </group>
 </menu>
