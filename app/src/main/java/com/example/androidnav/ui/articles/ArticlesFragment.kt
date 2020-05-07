@@ -5,13 +5,15 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.example.androidnav.MainActivity
 import com.example.androidnav.R
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_articles.*
+
 
 class ArticlesFragment : Fragment() {
 
@@ -31,17 +33,42 @@ class ArticlesFragment : Fragment() {
 //            textView.text = it
 //        })
 
-        Log.d("kiss", "hello from articles onCreateView")
-
-        btnArticles.setOnClickListener {
-            var toast: Toast = Toast.makeText(context, "Hello from articles", Toast.LENGTH_LONG)
-            toast.show()
-        }
-
         return root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        Log.d("kiss", "hello from articles onCreateView")
+
+        btnArticles.setOnClickListener {
+            var toast: Toast = Toast.makeText(context, "Hello from articles", Toast.LENGTH_LONG)
+            toast.show()
+
+            val db = FirebaseFirestore.getInstance()
+
+            var list: ArrayList<String> = ArrayList()
+            var adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_1, list)
+            listView.adapter = adapter
+
+            db.collection("Articles")
+                .get()
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        for (document in task.result!!) {
+                            Log.d("kiss", document.id + " => " + document.data)
+                            list.add(document.get("title").toString())
+                            list.add(document.get("content").toString())
+                            list.add(document.get("publicationDate").toString())
+                            list.add(document.get("source").toString())
+                            adapter.notifyDataSetChanged()
+                        }
+                    } else {
+                        Log.w("kiss", "Error getting documents.", task.exception)
+                    }
+                }
+        }
+
+
     }
 }

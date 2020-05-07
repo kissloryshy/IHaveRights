@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_articles"
         android:name="com.example.androidnav.ui.articles.ArticlesFragment"
-        android:label="@string/menu_home"
+        android:label="Статьи"
         tools:layout="@layout/fragment_articles">
 
         <action
@@ -32,13 +32,13 @@
     <fragment
         android:id="@+id/nav_favorites"
         android:name="com.example.androidnav.ui.favorites.FavoritesFragment"
-        android:label="@string/menu_gallery"
+        android:label="Сохраненные"
         tools:layout="@layout/fragment_favorites" />
 
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.example.androidnav.ui.settings.SettingsFragment"
-        android:label="@string/menu_slideshow"
+        android:label="Настройки"
         tools:layout="@layout/fragment_settings" />
 
     <fragment
@@ -49,6 +49,6 @@
     <fragment
         android:id="@+id/nav_support"
         android:name="com.example.androidnav.ui.support.SupportFragment"
-        android:label="fragment_support"
+        android:label="Поддержека"
         tools:layout="@layout/fragment_support" />
 </navigation>
