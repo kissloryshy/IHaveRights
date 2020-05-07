@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProviders
 import com.example.androidnav.MainActivity
 import com.example.androidnav.R
@@ -41,6 +42,9 @@ class ArticlesFragment : Fragment() {
 
         Log.d("kiss", "hello from articles onCreateView")
 
+        var toast: Toast = Toast.makeText(context, "hello from articles onCreateView", Toast.LENGTH_LONG)
+        toast.show()
+
         btnArticles.setOnClickListener {
             var toast: Toast = Toast.makeText(context, "Hello from articles", Toast.LENGTH_LONG)
             toast.show()
@@ -69,6 +73,13 @@ class ArticlesFragment : Fragment() {
                 }
         }
 
-
+        btnNextFragment.setOnClickListener {
+            var fragment = CurrentArticleFragment()
+            var manager = parentFragmentManager
+            var transaction = manager.beginTransaction()
+            transaction.replace(R.id.nav_host_fragment, fragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
     }
 }
