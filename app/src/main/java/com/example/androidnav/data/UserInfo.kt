@@ -68,8 +68,12 @@ class UserInfo(
         var query = "select name from UserInfo"
         var db: SQLiteDatabase = this.writableDatabase
         var cursor: Cursor = db.rawQuery(query, null)
-        cursor.moveToFirst()
-        var res: String = cursor.getString(cursor.getColumnIndex("name"))
-        return res
+
+        return if (cursor.count != 0) {
+            cursor.moveToFirst()
+            cursor.getString(cursor.getColumnIndex("name"))
+        } else {
+            ""
+        }
     }
 }
