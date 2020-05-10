@@ -33,11 +33,11 @@ class SettingsFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        var userInfo: UserInfo = UserInfo(context, "UserInfo", null, 1)
+        var userInfo = UserInfo(context, "UserInfo", null, 1)
         etName.setText(userInfo.getName())
 
         btnChangeName.setOnClickListener {
-            var userInfo: UserInfo = UserInfo(context, "UserInfo", null, 1)
+            var userInfo = UserInfo(context, "UserInfo", null, 1)
             userInfo.saveName(etName.text.toString())
 
             var toast: Toast = Toast.makeText(context, "Изменения вступят в силу после перезапуска приложения", Toast.LENGTH_LONG)
@@ -45,6 +45,9 @@ class SettingsFragment : Fragment() {
         }
 
         btnCleardb.setOnClickListener {
+            var userInfo = UserInfo(context, "UserInfo", null, 1)
+            userInfo.dropArticlesTable()
+
             var toast: Toast = Toast.makeText(context, "Сохраненные статьи удалены", Toast.LENGTH_LONG)
             toast.show()
         }

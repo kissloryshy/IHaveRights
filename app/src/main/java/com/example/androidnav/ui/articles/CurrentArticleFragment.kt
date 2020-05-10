@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 
 import com.example.androidnav.R
+import com.example.androidnav.data.UserInfo
 import kotlinx.android.synthetic.main.fragment_current_article.*
 
 class CurrentArticleFragment : Fragment() {
@@ -54,6 +55,13 @@ class CurrentArticleFragment : Fragment() {
         btnSaveArticle.setOnClickListener {
             var toast = Toast.makeText(context, "Сохранение", Toast.LENGTH_SHORT)
             toast.show()
+
+            var userInfo = UserInfo(context, "UserInfo", null, 1)
+            var content = tvContent.text.toString()
+            var source = tvContent.text.toString()
+            var title = tvTitle.text.toString()
+            var publicationDate = tvPublicationDate.text.toString()
+            userInfo.addArticle(content, source, title, publicationDate)
         }
 
     }

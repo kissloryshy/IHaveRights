@@ -45,31 +45,32 @@ class ArticlesFragment : Fragment() {
         var adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_1, titles)
         listView.adapter = adapter
 
-//        titles.add("Title one")
-//        titles.add("Title two")
-//        titles.add("Title three")
-//        titles.add("Title four")
-//        titles.add("Title five")
-//
-//        content.add("Content one")
-//        content.add("Content two")
-//        content.add("Content three")
-//        content.add("Content four")
-//        content.add("Content five")
-//
-//        publicationDate.add("PublicationDate one")
-//        publicationDate.add("PublicationDate two")
-//        publicationDate.add("PublicationDate three")
-//        publicationDate.add("PublicationDate four")
-//        publicationDate.add("PublicationDate five")
-//
-//        source.add("Source one")
-//        source.add("Source two")
-//        source.add("Source three")
-//        source.add("Source four")
-//        source.add("Source five")
+        if (titles.isEmpty()) {
+            titles.add("Title one")
+            titles.add("Title two")
+            titles.add("Title three")
+            titles.add("Title four")
+            titles.add("Title five")
+            content.add("Content one Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.")
+            content.add("Content two Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.")
+            content.add("Content three Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.")
+            content.add("Content four Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.")
+            content.add("Content five Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.")
 
-        adapter.notifyDataSetChanged()
+            publicationDate.add("PublicationDate one")
+            publicationDate.add("PublicationDate two")
+            publicationDate.add("PublicationDate three")
+            publicationDate.add("PublicationDate four")
+            publicationDate.add("PublicationDate five")
+
+            source.add("Source one")
+            source.add("Source two")
+            source.add("Source three")
+            source.add("Source four")
+            source.add("Source five")
+
+            adapter.notifyDataSetChanged()
+        }
 
         btnGetArticles.setOnClickListener {
             content.clear()

@@ -5,17 +5,23 @@
     android:layout_height="match_parent"
     tools:context=".ui.support.SupportFragment">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Справка"
-            android:textSize="26sp"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Справка"
+                android:textSize="26sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>
