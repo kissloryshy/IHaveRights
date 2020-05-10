@@ -6,7 +6,6 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
-import android.widget.Toast
 
 class UserInfo(
     context: Context?,
@@ -16,19 +15,19 @@ class UserInfo(
 ) : SQLiteOpenHelper(context, name, factory, version) {
 
     companion object {
-        private val DATABASE_VER = 1
-        private val DATABASE_NAME = "UserInfo"
+        private var DATABASE_VER = 1
+        private var DATABASE_NAME = "UserInfo"
 
         //Table UserInfo
-        private val TABLE_NAME = "UserInfo"
-        private val COL_NAME = "name"
+        private var TABLE_NAME = "UserInfo"
+        private var COL_NAME = "name"
 
         //Table Articles
-        private val TABLE_NAME_ARTICLES = "articles"
-        private val COL_CONTENT = "content"
-        private val COL_SOURCE = "source"
-        private val COL_TITLE = "title"
-        private val COL_PUBLICATION_DATE = "publicationDate"
+        private var TABLE_NAME_ARTICLES = "articles"
+        private var COL_CONTENT = "content"
+        private var COL_SOURCE = "source"
+        private var COL_TITLE = "title"
+        private var COL_PUBLICATION_DATE = "publicationDate"
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
@@ -45,6 +44,7 @@ class UserInfo(
         Log.d("kiss", "userInfo onCreate")
     }
 
+    //for new version db
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL("drop table if exists $TABLE_NAME;")
         onCreate(db!!)

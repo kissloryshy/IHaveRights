@@ -24,12 +24,6 @@
             android:hint="Введите свое имя"/>
 
         <Button
-            android:id="@+id/btnGetName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Получить" />
-
-        <Button
             android:id="@+id/btnChangeName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

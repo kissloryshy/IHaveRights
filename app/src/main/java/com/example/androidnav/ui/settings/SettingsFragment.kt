@@ -1,6 +1,5 @@
 package com.example.androidnav.ui.settings
 
-import android.database.sqlite.SQLiteDatabase
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -25,9 +24,8 @@ class SettingsFragment : Fragment() {
     ): View? {
         slideshowViewModel =
                 ViewModelProviders.of(this).get(SettingsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_settings, container, false)
 
-        return root
+        return inflater.inflate(R.layout.fragment_settings, container, false)
     }
 
     @RequiresApi(Build.VERSION_CODES.P)
@@ -36,13 +34,6 @@ class SettingsFragment : Fragment() {
 
         var userInfo: UserInfo = UserInfo(context, "UserInfo", null, 1)
         etName.setText(userInfo.getName())
-
-        btnGetName.setOnClickListener {
-            var userInfo: UserInfo = UserInfo(context, "UserInfo", null, 1)
-
-            var toast: Toast = Toast.makeText(context, userInfo.getName(), Toast.LENGTH_LONG)
-            toast.show()
-        }
 
         btnChangeName.setOnClickListener {
             var userInfo: UserInfo = UserInfo(context, "UserInfo", null, 1)
