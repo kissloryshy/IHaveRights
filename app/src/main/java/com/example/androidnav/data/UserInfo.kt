@@ -94,11 +94,13 @@ class UserInfo(
         var db = this.writableDatabase
         var cursor = db.rawQuery(sqlQuery, null)
 
-        cursor.moveToFirst()
-        list.add(cursor.getString(cursor.getColumnIndex(COL_CONTENT)))
-        list.add(cursor.getString(cursor.getColumnIndex(COL_PUBLICATION_DATE)))
-        list.add(cursor.getString(cursor.getColumnIndex(COL_SOURCE)))
-        list.add(cursor.getString(cursor.getColumnIndex(COL_TITLE)))
+        if(cursor.count != 0) {
+            cursor.moveToFirst()
+            list.add(cursor.getString(cursor.getColumnIndex(COL_CONTENT)))
+            list.add(cursor.getString(cursor.getColumnIndex(COL_PUBLICATION_DATE)))
+            list.add(cursor.getString(cursor.getColumnIndex(COL_SOURCE)))
+            list.add(cursor.getString(cursor.getColumnIndex(COL_TITLE)))
+        }
 
         return list
     }
