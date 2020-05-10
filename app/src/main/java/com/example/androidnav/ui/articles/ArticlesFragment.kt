@@ -45,33 +45,38 @@ class ArticlesFragment : Fragment() {
         var adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_1, titles)
         listView.adapter = adapter
 
-        titles.add("Title one")
-        titles.add("Title two")
-        titles.add("Title three")
-        titles.add("Title four")
-        titles.add("Title five")
-
-        content.add("Content one")
-        content.add("Content two")
-        content.add("Content three")
-        content.add("Content four")
-        content.add("Content five")
-
-        publicationDate.add("PublicationDate one")
-        publicationDate.add("PublicationDate two")
-        publicationDate.add("PublicationDate three")
-        publicationDate.add("PublicationDate four")
-        publicationDate.add("PublicationDate five")
-
-        source.add("Source one")
-        source.add("Source two")
-        source.add("Source three")
-        source.add("Source four")
-        source.add("Source five")
+//        titles.add("Title one")
+//        titles.add("Title two")
+//        titles.add("Title three")
+//        titles.add("Title four")
+//        titles.add("Title five")
+//
+//        content.add("Content one")
+//        content.add("Content two")
+//        content.add("Content three")
+//        content.add("Content four")
+//        content.add("Content five")
+//
+//        publicationDate.add("PublicationDate one")
+//        publicationDate.add("PublicationDate two")
+//        publicationDate.add("PublicationDate three")
+//        publicationDate.add("PublicationDate four")
+//        publicationDate.add("PublicationDate five")
+//
+//        source.add("Source one")
+//        source.add("Source two")
+//        source.add("Source three")
+//        source.add("Source four")
+//        source.add("Source five")
 
         adapter.notifyDataSetChanged()
 
         btnGetArticles.setOnClickListener {
+            content.clear()
+            publicationDate.clear()
+            source.clear()
+            titles.clear()
+
             val db = FirebaseFirestore.getInstance()
 
             db.collection("Articles")

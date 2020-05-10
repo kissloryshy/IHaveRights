@@ -13,25 +13,30 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Приложение Право имею"
+            android:text="Приложение *Право имею*"
             android:textSize="24sp"
-            android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Приложение предназначено для агрегирования новостей"
+            android:text="Приложение предназначено для своевременного осведомления о поправках в законах для людей пенсионного возраста."
             android:textSize="24sp"
-            android:padding="20dp"/>
+            android:paddingTop="20dp"/>
 
-        <Button
-            android:id="@+id/btnTest"
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="test"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"/>
+            android:text="Версия приложения: 0.1"
+            android:textSize="24sp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Приложение находится в разработке. Могут наблюдаться ошибки"
+            android:textSize="24sp"
+            android:layout_marginTop="20dp"/>
 
     </LinearLayout>
 

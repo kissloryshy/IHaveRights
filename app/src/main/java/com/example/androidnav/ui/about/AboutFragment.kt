@@ -29,11 +29,6 @@ class AboutFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(AboutViewModel::class.java)
-
-        btnTest.setOnClickListener {
-            var toast: Toast = Toast.makeText(context, "Hello from About", Toast.LENGTH_LONG)
-            toast.show()
-        }
     }
 
 }

@@ -29,12 +29,6 @@ class SupportFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(SupportViewModel::class.java)
-        // TODO: Use the ViewModel
-
-        btnSupport.setOnClickListener {
-            var toast: Toast = Toast.makeText(context, "Hello from Support", Toast.LENGTH_LONG)
-            toast.show()
-        }
     }
 
 }

@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.example.androidnav.R
 import com.example.androidnav.data.UserInfo
 import kotlinx.android.synthetic.main.fragment_settings.*
+import kotlinx.android.synthetic.main.nav_header_main.*
 
 class SettingsFragment : Fragment() {
 
@@ -38,7 +39,8 @@ class SettingsFragment : Fragment() {
         btnChangeName.setOnClickListener {
             var userInfo: UserInfo = UserInfo(context, "UserInfo", null, 1)
             userInfo.saveName(etName.text.toString())
-            var toast: Toast = Toast.makeText(context, "changed", Toast.LENGTH_LONG)
+
+            var toast: Toast = Toast.makeText(context, "Изменения вступят в силу после перезапуска приложения", Toast.LENGTH_LONG)
             toast.show()
         }
 
