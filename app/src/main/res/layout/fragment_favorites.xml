@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".ui.favorites.FavoritesFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
 
         <LinearLayout
             android:orientation="vertical"
@@ -22,7 +22,7 @@
 
         </LinearLayout>
 
-    </ScrollView>
+<!--    </ScrollView>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

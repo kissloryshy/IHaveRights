@@ -87,10 +87,28 @@ class UserInfo(
         db.close()
     }
 
-    fun getArticles() : ArrayList<String> {
+    fun getArticleTitles() : ArrayList<String> {
         var list = ArrayList<String>()
 
-        var sqlQuery = "select * from $TABLE_NAME_ARTICLES"
+        var sqlQuery = "select $COL_TITLE from $TABLE_NAME_ARTICLES"
+        var db = this.writableDatabase
+        var cursor = db.rawQuery(sqlQuery, null)
+
+        if (cursor.count != 0) {
+            cursor.moveToFirst()
+            list.add(cursor.getString(cursor.getColumnIndex(COL_TITLE)))
+            while (cursor.moveToNext()) {
+                list.add(cursor.getString(cursor.getColumnIndex(COL_TITLE)))
+            }
+        }
+        cursor.close()
+        return list
+    }
+
+    fun getArticleByTitle(title: String) : ArrayList<String> {
+        var list = ArrayList<String>()
+
+        var sqlQuery = "select * from $TABLE_NAME_ARTICLES where $COL_TITLE = \"$title\""
         var db = this.writableDatabase
         var cursor = db.rawQuery(sqlQuery, null)
 

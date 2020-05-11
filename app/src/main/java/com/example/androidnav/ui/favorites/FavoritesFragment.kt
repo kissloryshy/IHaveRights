@@ -4,18 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.androidnav.R
 import com.example.androidnav.data.UserInfo
-import com.example.androidnav.ui.articles.CurrentArticleFragment
-import kotlinx.android.synthetic.main.fragment_articles.*
 import kotlinx.android.synthetic.main.fragment_favorites.*
 
 class FavoritesFragment : Fragment() {
@@ -48,29 +43,20 @@ class FavoritesFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         var userInfo = UserInfo(context, "UserInfo", null, 1)
-        userInfo.getArticles()
-
-        var titles = ArrayList<String>()
-        titles.add("title one")
+        var titles = userInfo.getArticleTitles()
         var adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_1, titles)
         listViewFav.adapter = adapter
+        adapter.notifyDataSetChanged()
 
         listViewFav.setOnItemClickListener { parent, view, position, id ->
+            var selectedTitle = listViewFav.getItemAtPosition(position).toString()
+            var article = userInfo.getArticleByTitle(selectedTitle)
             var args = Bundle()
-            args.putString("title", "lorem ipsum")
-            args.putString("content", "lorem ipsum")
-            args.putString("publicationDate", "lorem ipsum")
-            args.putString("source", "lorem ipsum")
-//            var fragment = CurrentFavoritesFragment()
-//            fragment.arguments = args
-//            var manager = parentFragmentManager
-//            var transaction = manager.beginTransaction()
-//            transaction.replace(R.id.nav_host_fragment, fragment)
-//            transaction.addToBackStack(null)
-//            transaction.commit()
-
+            args.putString("content", article[0])
+            args.putString("publicationDate", article[1])
+            args.putString("source", article[2])
+            args.putString("title", article[3])
             navController!!.navigate(R.id.action_nav_favorites_to_currentFavoritesFragment, args)
-
         }
     }
 
