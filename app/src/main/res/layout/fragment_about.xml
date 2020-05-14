@@ -18,28 +18,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Приложение *Право имею*"
-                android:textSize="24sp"
+                android:textSize="@dimen/articleTitleTextSize"
                 android:layout_marginTop="10dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Приложение предназначено для своевременного осведомления о поправках в законах для людей пенсионного возраста."
-                android:textSize="24sp"
+                android:textSize="@dimen/articleContentTextSize"
                 android:paddingTop="20dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Версия приложения: 0.1"
-                android:textSize="24sp"
+                android:textSize="@dimen/articleContentTextSize"
                 android:layout_marginTop="20dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Приложение находится в разработке. Могут наблюдаться ошибки"
-                android:textSize="24sp"
+                android:textSize="@dimen/articleContentTextSize"
                 android:layout_marginTop="20dp"/>
 
         </LinearLayout>

@@ -43,6 +43,9 @@ class FavoritesFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         var userInfo = UserInfo(context, "UserInfo", null, 1)
+
+        tvArticleCount.text = "Всего сохраненных статей: " + userInfo.getArticleCount()
+
         var titles = userInfo.getArticleTitles()
         var adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_1, titles)
         listViewFav.adapter = adapter

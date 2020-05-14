@@ -19,27 +19,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ваше имя:"
-                android:textSize="26sp"/>
+                android:textSize="@dimen/articleContentTextSize"/>
 
             <EditText
                 android:id="@+id/etName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Введите свое имя"
-                android:textSize="24sp"/>
+                android:textSize="@dimen/articleContentTextSize"/>
 
             <Button
                 android:id="@+id/btnChangeName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Сохранить"
-                android:textSize="20sp"/>
+                android:textSize="@dimen/buttonTextSize"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Очистить сохраненные статьи:"
-                android:textSize="24sp"
+                android:textSize="@dimen/articleContentTextSize"
                 android:layout_marginTop="20dp"/>
 
             <Button
@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Очистить"
-                android:textSize="20sp"/>
+                android:textSize="@dimen/buttonTextSize"/>
 
         </LinearLayout>
 

@@ -5,4 +5,9 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">220dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+<!--    TextSize-->
+    <dimen name="buttonTextSize">16sp</dimen>
+    <dimen name="articleTitleTextSize">22sp</dimen>
+    <dimen name="articleContentTextSize">20sp</dimen>
 </resources>

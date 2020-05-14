@@ -14,68 +14,61 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/btnBackTest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="back"
-                android:layout_gravity="center_horizontal"/>
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Заголовок:"
-                android:textSize="26sp"
+                android:textSize="@dimen/articleTitleTextSize"
                 android:textColor="@color/titleTextColor"/>
 
             <TextView
                 android:id="@+id/tvFavTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:textSize="@dimen/articleContentTextSize"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Содержание:"
-                android:textSize="26sp"
+                android:textSize="@dimen/articleTitleTextSize"
                 android:textColor="@color/titleTextColor"/>
 
             <TextView
                 android:id="@+id/tvFavContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:textSize="@dimen/articleContentTextSize"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Дата публикации:"
-                android:textSize="26sp"
+                android:textSize="@dimen/articleTitleTextSize"
                 android:textColor="@color/titleTextColor"/>
 
             <TextView
                 android:id="@+id/tvFavPublicationDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:textSize="@dimen/articleContentTextSize"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Источник:"
-                android:textSize="26sp"
+                android:textSize="@dimen/articleTitleTextSize"
                 android:textColor="@color/titleTextColor"/>
 
             <TextView
                 android:id="@+id/tvFavSource"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:textSize="@dimen/articleContentTextSize"/>
 
         </LinearLayout>
 

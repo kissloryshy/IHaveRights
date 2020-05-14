@@ -15,8 +15,7 @@ class CurrentFavoritesFragment : Fragment() {
     var bundle = Bundle()
 
     companion object {
-        fun newInstance() =
-            CurrentFavoritesFragment()
+        fun newInstance() = CurrentFavoritesFragment()
     }
 
     private lateinit var viewModel: CurrentFavoritesViewModel
@@ -26,7 +25,7 @@ class CurrentFavoritesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        bundle = this!!.requireArguments()
+        bundle = this.requireArguments()
 
         return inflater.inflate(R.layout.fragment_favorites_current, container, false)
     }
@@ -39,11 +38,6 @@ class CurrentFavoritesFragment : Fragment() {
         tvFavTitle.text = bundle.getString("title")
         tvFavPublicationDate.text = bundle.getString("publicationDate")
         tvFavSource.text = bundle.getString("source")
-
-        btnBackTest.setOnClickListener {
-            var manager = childFragmentManager
-            manager.popBackStackImmediate()
-        }
 
     }
 

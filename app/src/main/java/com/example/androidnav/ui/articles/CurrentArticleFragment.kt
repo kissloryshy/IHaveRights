@@ -53,15 +53,15 @@ class CurrentArticleFragment : Fragment() {
         tvSource.text = bundle.getString("source")
 
         btnSaveArticle.setOnClickListener {
-            var toast = Toast.makeText(context, "Сохранение", Toast.LENGTH_SHORT)
-            toast.show()
-
             var userInfo = UserInfo(context, "UserInfo", null, 1)
             var content = tvContent.text.toString()
-            var source = tvContent.text.toString()
+            var source = tvSource.text.toString()
             var title = tvTitle.text.toString()
             var publicationDate = tvPublicationDate.text.toString()
-            userInfo.addArticle(content, source, title, publicationDate)
+            val result = userInfo.addArticle(content, source, title, publicationDate)
+
+            var toast = Toast.makeText(context, result, Toast.LENGTH_SHORT)
+            toast.show()
         }
 
     }
