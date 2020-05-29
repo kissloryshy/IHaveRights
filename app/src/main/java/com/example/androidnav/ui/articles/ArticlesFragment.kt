@@ -73,7 +73,8 @@ class ArticlesFragment : Fragment() {
 //            adapter.notifyDataSetChanged()
 //        }
 
-        btnGetArticles.setOnClickListener {
+//        Button update
+//        btnGetArticles.setOnClickListener {
             content.clear()
             publicationDate.clear()
             source.clear()
@@ -97,7 +98,7 @@ class ArticlesFragment : Fragment() {
                         Log.w("kiss", "Error getting documents.", task.exception)
                     }
                 }
-        }
+//        }
 
         listView.setOnItemClickListener { parent, view, position, id ->
             Log.d("position", position.toString())

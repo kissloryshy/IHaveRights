@@ -33,7 +33,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Добрый вечер"
+        android:text="Добрый день"
         android:textSize="20sp"/>
 
 </LinearLayout>

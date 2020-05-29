@@ -17,7 +17,42 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Справка"
+                android:text="Бесплатная юридическая консультация в Ростове-на-Дону:"
+                android:textSize="@dimen/articleTitleTextSize"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Горячая линия по вопросам защиты прав потребителей в РО: \n8-961-30-101-03"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/articleTitleTextSize"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Управление Роспотребнадзора по Ростовской области: \n8(863)282-82-63, 282-82-64, 8-800-100-29-26"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/articleTitleTextSize"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Центр гигиены и эпидемологии в Ростовской области: \n8(863)235-19-00"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/articleTitleTextSize"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Департамент экономики города Ростова-на-Дону (отдел туризма и защиты прав потребителей): \n8(863)251-98-10, 251-57-28"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/articleTitleTextSize"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Территориальный орган по надзору в сфере здравоохранения по Ростовской области (Росздравнадзор): \n8(863)286-98-11, 286-98-10"
+                android:layout_marginTop="20dp"
                 android:textSize="@dimen/articleTitleTextSize"/>
 
         </LinearLayout>
